@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b5b45">
+<title>Bihar Seva | बिहार सेवा</title>
+<style>
+:root{--green:#0b5b45;--green2:#13795b;--gold:#f4b942;--ink:#17332b;--muted:#64756f;--bg:#f3f7f5;--white:#fff}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Noto Sans Devanagari",sans-serif;background:var(--bg);color:var(--ink)}
+header{background:linear-gradient(135deg,#084c3a,#16815f);color:white;padding:25px 16px 30px}
+.wrap{max-width:1050px;margin:auto}.top{display:flex;align-items:center;gap:12px}.logo{width:48px;height:48px;border-radius:15px;background:#fff;color:var(--green);display:grid;place-items:center;font-weight:900;font-size:22px}
+h1{font-size:26px;margin:0}header p{margin:5px 0 0;color:#e1f2ea}.hero{margin-top:24px}.hero h2{font-size:25px;line-height:1.3;margin:0 0 8px}.hero p{max-width:650px;line-height:1.6}
+.notice{background:#fff8e8;border:1px solid #f4d58c;color:#654b12;padding:12px 14px;border-radius:12px;margin:18px 0}
+main{padding:22px 16px 40px}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.toolbar input,.toolbar select{border:1px solid #d5e2dc;border-radius:12px;padding:12px 13px;font:inherit;background:white;min-width:0}.toolbar input{flex:1;min-width:190px}.toolbar select{width:170px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:13px}.card{background:white;border:1px solid #e0eae5;border-radius:16px;padding:16px;box-shadow:0 4px 14px #103d2a0a;display:flex;flex-direction:column;min-height:150px}.number{font-size:12px;color:var(--green2);font-weight:800;letter-spacing:.04em}.card h3{font-size:17px;margin:8px 0}.price{font-size:20px;font-weight:850;color:var(--green);margin-top:auto;padding-top:10px}.price small{font-size:12px;font-weight:500;color:var(--muted)}
+footer{background:#103e30;color:#e8f4ee;padding:24px 16px;font-size:14px;line-height:1.7}.empty{padding:25px;text-align:center;color:var(--muted);grid-column:1/-1}
+@media(max-width:520px){h1{font-size:22px}.hero h2{font-size:22px}.toolbar select{flex:1}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="top"><div class="logo">BS</div><div><h1>बिहार सेवा</h1><p>आपकी सुविधा, आपकी सेवा</p></div></div>
+  <div class="hero"><h2>जरूरी ऑनलाइन सेवाओं में सहायता</h2><p>दस्तावेज़, आवेदन और ऑनलाइन प्रक्रिया को समझने तथा भरने में सहायता प्राप्त करें। बिहार के सभी जिलों के लोगों के लिए।</p></div>
+</div></header>
+<main class="wrap">
+  <div class="notice"><strong>जरूरी सूचना:</strong> नीचे दी गई राशि बिहार सेवा की प्रस्तावित सहायता फीस है, सरकारी शुल्क नहीं। सरकारी/पोर्टल शुल्क अलग हो सकता है। आवेदन की मंजूरी संबंधित सरकारी विभाग पर निर्भर है।</div>
+  <h2>हमारी 30 सेवाएँ और सहायता फीस</h2>
+  <div class="toolbar">
+    <input id="search" type="search" placeholder="सेवा खोजें…">
+    <select id="filter"><option value="all">सभी सेवाएँ</option><option value="40">₹40 तक</option><option value="50">₹50–₹100</option><option value="100">₹100 से अधिक</option></select>
+  </div>
+  <section class="grid" id="services" aria-live="polite"></section>
+</main>
+<footer><div class="wrap">
+  <strong>बिहार सेवा — निजी सहायता प्लेटफॉर्म</strong><br>
+  हम आवेदन प्रक्रिया में मार्गदर्शन/सहायता देते हैं; हम सरकारी विभाग नहीं हैं। किसी भी सेवा के लिए OTP, पासवर्ड, बैंक PIN या पूरा आधार नंबर वेबसाइट पर साझा न करें। केवल अधिकृत पोर्टल/केंद्र से आवेदन करें। भुगतान या आवेदन जमा करने की सुविधा इस वेबसाइट पर अभी सक्रिय नहीं है। नाबालिग उपयोगकर्ता किसी भी भुगतान या सेवा संचालन में अभिभावक की मदद लें।
+</div></footer>
+<script>
+const items = [
+["PAN कार्ड आवेदन सहायता",175],["राशन कार्ड आवेदन/सुधार सहायता",50],["आधार सुधार सहायता",240],
+["जाति प्रमाण-पत्र सहायता",40],["आय प्रमाण-पत्र सहायता",40],["निवास प्रमाण-पत्र सहायता",40],
+["जन्म प्रमाण-पत्र सहायता",60],["मृत्यु प्रमाण-पत्र सहायता",60],["छात्रवृत्ति फॉर्म सहायता",50],
+["वोटर ID सहायता",50],["ड्राइविंग लाइसेंस प्रक्रिया सहायता",100],["उद्यम/MSME पंजीकरण सहायता",100],
+["ई-श्रम कार्ड सहायता",100],["बैंक फॉर्म भरने में सहायता",30],["मोबाइल नंबर अपडेट प्रक्रिया सहायता",30],
+["दस्तावेज़ प्रिंट/स्कैन",10],["फोटो/PDF बनाने की सहायता",20],["प्रधानमंत्री आवास योजना सहायता",50],
+["नल-जल शिकायत दर्ज करने में सहायता",30],["बिजली कनेक्शन आवेदन सहायता",50],["LPG गैस सेवा सहायता",30],
+["बिजली बिल भुगतान में सहायता",10],["स्कूल/कॉलेज प्रवेश फॉर्म सहायता",50],["बोर्ड परीक्षा फॉर्म सहायता",50],
+["माइग्रेशन/TC प्रक्रिया सहायता",30],["किसान पंजीकरण सहायता",50],["PM-किसान योजना सहायता",30],
+["आयुष्मान कार्ड सहायता",100],["पेंशन आवेदन सहायता",50],["पासपोर्ट आवेदन प्रक्रिया सहायता",100]
+];
+const grid=document.getElementById("services"), search=document.getElementById("search"), filter=document.getElementById("filter");
+function render(){
+ const q=search.value.trim().toLowerCase(), f=filter.value;
+ const shown=items.filter(([name,price])=>{
+  const match=name.toLowerCase().includes(q);
+  const priceMatch=f==="all"||(f==="40"&&price<=40)||(f==="50"&&price>=50&&price<=100)||(f==="100"&&price>100);
+  return match&&priceMatch;
+ });
+ grid.innerHTML=shown.length?shown.map(([name,price])=>`<article class="card"><div class="number">BIHAR SEVA · सहायता सेवा</div><h3>${name}</h3><div class="price">₹${price} <small>सेवा सहायता फीस से शुरू</small></div></article>`).join(""):'<div class="empty">कोई सेवा नहीं मिली। दूसरा नाम लिखकर खोजें।</div>';
+}
+search.addEventListener("input",render);filter.addEventListener("change",render);render();
+</script>
+</body></html>
