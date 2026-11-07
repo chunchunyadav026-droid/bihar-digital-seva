@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bihar Seva — बिहार के नागरिकों के लिए दस्तावेज़ और ऑनलाइन आवेदन प्रक्रिया की जानकारी एवं मार्गदर्शन।">
+  <title>Bihar Seva | बिहार सेवा</title>
+  <style>
+    :root{--saffron:#ef7d22;--green:#16834a;--ink:#17212b;--muted:#65717d;--paper:#f5f7f8;--line:#e5e9ed}
+    *{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Noto Sans Devanagari",Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55}
+    header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+    .nav{max-width:1100px;margin:auto;padding:13px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px}.logo{width:42px;height:42px;border-radius:12px;background:linear-gradient(145deg,var(--saffron) 0 50%,var(--green) 50%);display:grid;place-items:center;color:#fff;font-weight:900}
+    a{color:inherit}.nav a{text-decoration:none;font-weight:650;color:#344454}
+    .hero{background:linear-gradient(120deg,#fff3e8,#effaf3);padding:56px 18px 48px}
+    .wrap{max-width:1100px;margin:auto}.hero h1{font-size:clamp(30px,5vw,48px);line-height:1.15;margin:0 0 14px}.hero p{max-width:700px;color:#4e5c68;font-size:17px;margin:0 0 22px}
+    .actions{display:flex;flex-wrap:wrap;gap:10px}.btn{display:inline-block;padding:11px 17px;border-radius:10px;text-decoration:none;font-weight:750;background:var(--green);color:#fff}.btn.alt{background:#fff;color:var(--ink);border:1px solid var(--line)}
+    main{max-width:1100px;margin:30px auto;padding:0 18px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:15px;flex-wrap:wrap;margin:28px 0 15px}
+    h2{font-size:25px;margin:0}.hint{color:var(--muted);margin:4px 0 0}
+    .search{width:min(100%,360px);padding:12px 14px;border:1px solid #cfd7de;border-radius:10px;font:inherit;background:#fff}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:0 3px 12px #17212b08}
+    .card .symbol{font-size:25px}.card h3{margin:8px 0 5px;font-size:18px}.card p{margin:0;color:var(--muted);font-size:14px}
+    .districts{display:flex;flex-wrap:wrap;gap:8px}.district{background:#fff;border:1px solid var(--line);padding:7px 11px;border-radius:999px;font-size:14px}
+    .notice{margin:26px 0;background:#fff8e9;border:1px solid #f2d9a8;border-radius:12px;padding:16px;color:#60491d}
+    .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}.step{background:#fff;border:1px solid var(--line);border-radius:12px;padding:15px}.step b{display:block;margin-bottom:5px}
+    footer{margin-top:42px;background:#17212b;color:#eaf0f4;padding:28px 18px}.foot{max-width:1100px;margin:auto}.foot p{color:#c6d0d8;font-size:14px}
+    .empty{display:none;color:var(--muted);padding:14px}
+    @media(max-width:600px){.hero{padding:38px 18px}.nav{align-items:flex-start}.nav a{font-size:13px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <div class="brand"><div class="logo">BS</div><span>बिहार सेवा</span></div>
+    <a href="#services">सेवाएँ देखें ↓</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>आपकी सेवा, आपके बिहार में</h1>
+    <p>दस्तावेज़, प्रमाणपत्र और ऑनलाइन आवेदन की प्रक्रिया समझने के लिए सरल हिंदी में मार्गदर्शन। सही जानकारी लें और आवेदन केवल आधिकारिक सरकारी पोर्टल पर करें।</p>
+    <div class="actions">
+      <a class="btn" href="#services">सेवाएँ देखें</a>
+      <a class="btn alt" href="#districts">बिहार के जिले</a>
+    </div>
+  </div>
+</section>
+
+<main>
+  <section id="services">
+    <div class="section-head">
+      <div><h2>हमारी सेवाएँ</h2><p class="hint">सेवा खोजने के लिए नीचे लिखें।</p></div>
+      <input class="search" id="search" type="search" placeholder="जैसे: राशन कार्ड, पैन कार्ड…" aria-label="सेवा खोजें">
+    </div>
+    <div class="grid" id="serviceGrid">
+      <article class="card" data-search="pan card पैन कार्ड"><div class="symbol">🪪</div><h3>पैन कार्ड</h3><p>नया पैन, सुधार और आवेदन प्रक्रिया की जानकारी।</p></article>
+      <article class="card" data-search="ration card राशन कार्ड"><div class="symbol">🍚</div><h3>राशन कार्ड</h3><p>नया आवेदन, सदस्य जोड़ने या हटाने की प्रक्रिया की जानकारी।</p></article>
+      <article class="card" data-search="aadhaar आधार"><div class="symbol">📄</div><h3>आधार सहायता</h3><p>आधार अपडेट और उपलब्ध अधिकृत केंद्रों की जानकारी।</p></article>
+      <article class="card" data-search="caste जाति income आय residence निवास"><div class="symbol">📑</div><h3>जाति, आय और निवास</h3><p>प्रमाणपत्र आवेदन की प्रक्रिया और जरूरी दस्तावेज़ों की जानकारी।</p></article>
+      <article class="card" data-search="birth जन्म प्रमाणपत्र"><div class="symbol">👶</div><h3>जन्म प्रमाणपत्र</h3><p>जन्म पंजीकरण और प्रमाणपत्र संबंधी मार्गदर्शन।</p></article>
+      <article class="card" data-search="scholarship छात्रवृत्ति"><div class="symbol">🎓</div><h3>छात्रवृत्ति</h3><p>योजना, पात्रता और आवेदन प्रक्रिया की जानकारी।</p></article>
+      <article class="card" data-search="voter मतदाता पहचान पत्र"><div class="symbol">🗳️</div><h3>वोटर आईडी</h3><p>नया पंजीकरण और विवरण सुधार की जानकारी।</p></article>
+      <article class="card" data-search="driving licence ड्राइविंग लाइसेंस"><div class="symbol">🚗</div><h3>ड्राइविंग लाइसेंस</h3><p>लर्नर और स्थायी लाइसेंस प्रक्रिया की जानकारी।</p></article>
+      <article class="card" data-search="msme उद्यम registration रजिस्ट्रेशन"><div class="symbol">🏪</div><h3>MSME / उद्यम</h3><p>उद्यम पंजीकरण की प्रक्रिया समझने में सहायता।</p></article>
+    </div>
+    <p class="empty" id="empty">इस नाम से कोई सेवा नहीं मिली। दूसरा शब्द लिखकर देखें।</p>
+  </section>
+
+  <div class="notice"><b>महत्वपूर्ण सूचना:</b> बिहार सेवा एक निजी मार्गदर्शन वेबसाइट है। यह बिहार सरकार या किसी सरकारी विभाग की आधिकारिक वेबसाइट नहीं है। सरकारी शुल्क और नियम बदल सकते हैं—आवेदन से पहले आधिकारिक पोर्टल पर जाँच करें।</div>
+
+  <section id="districts">
+    <div class="section-head"><div><h2>बिहार के 38 जिले</h2><p class="hint">बिहार के सभी जिलों के लिए जानकारी।</p></div></div>
+    <div class="districts">
+      <span class="district">अररिया</span><span class="district">अरवल</span><span class="district">औरंगाबाद</span><span class="district">बांका</span><span class="district">बेगूसराय</span><span class="district">भागलपुर</span><span class="district">भोजपुर</span><span class="district">बक्सर</span><span class="district">दरभंगा</span><span class="district">पूर्वी चंपारण</span><span class="district">गया</span><span class="district">गोपालगंज</span><span class="district">जमुई</span><span class="district">जहानाबाद</span><span class="district">कैमूर</span><span class="district">कटिहार</span><span class="district">खगड़िया</span><span class="district">किशनगंज</span><span class="district">लखीसराय</span><span class="district">मधेपुरा</span><span class="district">मधुबनी</span><span class="district">मुंगेर</span><span class="district">मुजफ्फरपुर</span><span class="district">नालंदा</span><span class="district">नवादा</span><span class="district">पटना</span><span class="district">पूर्णिया</span><span class="district">रोहतास</span><span class="district">सहरसा</span><span class="district">समस्तीपुर</span><span class="district">सारण</span><span class="district">शेखपुरा</span><span class="district">शिवहर</span><span class="district">सीतामढ़ी</span><span class="district">सीवान</span><span class="district">सुपौल</span><span class="district">वैशाली</span><span class="district">पश्चिमी चंपारण</span>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><div><h2>सेवा लेने का तरीका</h2><p class="hint">आवेदन करने से पहले इन बातों का ध्यान रखें।</p></div></div>
+    <div class="steps">
+      <div class="step"><b>1. सेवा चुनें</b>अपनी जरूरत के अनुसार सेवा खोजें।</div>
+      <div class="step"><b>2. जानकारी जाँचें</b>पात्रता, दस्तावेज़ और सरकारी शुल्क आधिकारिक वेबसाइट पर देखें।</div>
+      <div class="step"><b>3. आधिकारिक पोर्टल पर आवेदन करें</b>अपना पासवर्ड, OTP या बैंक जानकारी किसी के साथ साझा न करें।</div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="foot"><b>बिहार सेवा</b><p>निजी सूचना एवं मार्गदर्शन मंच। सरकारी विभाग से संबद्ध नहीं। इस शुरुआती वेबसाइट में ऑनलाइन भुगतान, लॉगिन या आवेदन जमा करने की सुविधा अभी चालू नहीं है।</p><small>© <span id="year"></span> Bihar Seva</small></div></footer>
+<script>
+  const search = document.getElementById('search');
+  const cards = [...document.querySelectorAll('#serviceGrid .card')];
+  const empty = document.getElementById('empty');
+  search.addEventListener('input', () => {
+    const q = search.value.trim().toLocaleLowerCase('hi');
+    let shown = 0;
+    cards.forEach(card => {
+      const match = (card.innerText + ' ' + card.dataset.search).toLocaleLowerCase('hi').includes(q);
+      card.style.display = match ? '' : 'none';
+      if (match) shown++;
+    });
+    empty.style.display = shown ? 'none' : 'block';
+  });
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
